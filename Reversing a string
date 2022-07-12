@@ -1,7 +1,5 @@
 string = input ('Enter a string :')
 q = len(string)
-i = q
-while i>0:
+while q>0:
     print (string[q-1],end="")
-    i = i-1
     q = q-1
