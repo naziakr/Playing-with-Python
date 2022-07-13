@@ -1,0 +1,13 @@
+file = input('Enter the file name ')
+
+try:
+    inp = open(file)
+    for line in inp:
+        count = 0
+        if line.startswith('From'):
+            count = count+1
+    print ('There are', count,'subject lines in the file.')
+    
+except:
+     print ('NA NA BOOOBOOO')
+     quit()
