@@ -1,0 +1,15 @@
+file = input('Enter the file name ')
+inp = open(file)
+count = 0
+for line in inp:
+    if line.startswith('X-DSPAM'):
+        
+        z = line.find('0')
+        y = float(line[z:])
+        count = count+1
+        
+        
+print(y)
+print(count)
+print(y/count)
+       
