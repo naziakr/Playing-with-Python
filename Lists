@@ -1,0 +1,19 @@
+stuff = list()
+def add(inp):   
+    stuff.append(inp)
+
+
+i = 0
+while i<5:
+    inp = input('What do you want to add ')
+    add(inp)
+    i = i+1
+    
+print(stuff)
+stuff.sort()
+print(stuff)
+print (len(stuff))
+print (max(stuff))
+print (min(stuff))
+s = sum(stuff)
+print (s)
