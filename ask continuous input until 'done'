@@ -1,0 +1,11 @@
+list = list()
+while True:
+    inp = input('Add the number ')
+    
+  
+    if inp == 'done':
+        print (list)
+        print (min(list))
+        print(max(list))
+        quit()
+    list.append(inp)
