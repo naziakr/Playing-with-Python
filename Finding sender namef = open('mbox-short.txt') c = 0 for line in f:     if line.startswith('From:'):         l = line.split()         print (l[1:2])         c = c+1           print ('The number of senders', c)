@@ -1,0 +1,10 @@
+f = open('mbox-short.txt')
+c = 0
+for line in f:
+    if line.startswith('From:'):
+        l = line.split()
+        print (l[1:2])
+        c = c+1
+    
+    
+print ('The number of senders', c)
