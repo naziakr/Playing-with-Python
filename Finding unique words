@@ -1,0 +1,21 @@
+file = input('Enter what do you want to split')
+read = open(file)
+words = []
+with read as f:
+    for line in f:
+        words.extend(line.split())
+        
+print(words)
+     
+        
+final = []        
+      
+l = len(words)
+i = 0
+while i<l:
+    if  words[i] not in final:
+        final.append(words[i]) 
+    i = i+1        
+print(final)   
+final.sort()
+print(final)
