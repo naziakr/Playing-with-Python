@@ -1,0 +1,30 @@
+count = dict()
+counts = dict()
+inp = input('enter the file ')
+file = open(inp)
+email = list()
+domainname = list()
+# seperate email and domain name
+for line in file:
+   if line.startswith('From'):
+       words = line.split()
+       email.append(words[1])
+       domain = words[1].split('@')
+       domainname.append(domain)
+ # count number of emails
+for word in email:
+    count[word] = count.get(word,0)+1
+print(word, count)
+ # max emails from
+bigcount = None
+bigname = None
+for word,count in count.items():
+    if bigcount is None or count>bigcount:
+       bigcount = count
+       bigname = word
+print(bigname, count)
+  
+# number of domain names
+for word in domainname:
+    counts[word] = counts.get(word,0)+1
+print(counts)
