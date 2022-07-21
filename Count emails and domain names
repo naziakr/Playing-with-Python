@@ -9,7 +9,7 @@ for line in file:
    if line.startswith('From'):
        words = line.split()
        email.append(words[1])
-       domain = words[1].split('@')
+       domain = words[1].split('@')[1]
        domainname.append(domain)
  # count number of emails
 for word in email:
