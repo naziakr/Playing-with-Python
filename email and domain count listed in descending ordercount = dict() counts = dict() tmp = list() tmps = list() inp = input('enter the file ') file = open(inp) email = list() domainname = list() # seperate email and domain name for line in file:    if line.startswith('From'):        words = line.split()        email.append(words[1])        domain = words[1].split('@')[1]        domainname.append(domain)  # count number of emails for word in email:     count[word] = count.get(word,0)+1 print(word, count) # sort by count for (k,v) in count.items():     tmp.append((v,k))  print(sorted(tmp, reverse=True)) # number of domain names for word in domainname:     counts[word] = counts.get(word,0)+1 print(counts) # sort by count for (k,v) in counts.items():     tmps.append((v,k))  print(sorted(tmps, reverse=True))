@@ -1,0 +1,33 @@
+count = dict()
+counts = dict()
+tmp = list()
+tmps = list()
+inp = input('enter the file ')
+file = open(inp)
+email = list()
+domainname = list()
+# seperate email and domain name
+for line in file:
+   if line.startswith('From'):
+       words = line.split()
+       email.append(words[1])
+       domain = words[1].split('@')[1]
+       domainname.append(domain)
+ # count number of emails
+for word in email:
+    count[word] = count.get(word,0)+1
+print(word, count)
+# sort by count
+for (k,v) in count.items():
+    tmp.append((v,k))
+
+print(sorted(tmp, reverse=True))
+# number of domain names
+for word in domainname:
+    counts[word] = counts.get(word,0)+1
+print(counts)
+# sort by count
+for (k,v) in counts.items():
+    tmps.append((v,k))
+
+print(sorted(tmps, reverse=True))
