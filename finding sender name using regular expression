@@ -4,7 +4,11 @@ inp = input('Enter a file: ')
 f = open(inp)
 for line in f:
     line = line.rstrip()
-    # match non blank character ([^ ]) anny number (*) of them
+    y = re.findall('^From: (\S@\S+)', line)
+    if len(y) !=1: continue:
+    print(y)
+    
+    # match non blank character ([^ ]) anny number (*) of them to finddomain name
     t = re.findall('^From .*@([^ ]*)', line)
     if len(t) !=1: continue
     print(t)
