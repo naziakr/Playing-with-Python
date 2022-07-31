@@ -1,0 +1,15 @@
+import re
+num = list()
+
+inp = input('Enter the file ')
+f = open(inp)
+for line in f:
+    line = line.rstrip()
+    t = re.findall('^New Revision: ([0-9]+)', line)
+    if len(t) != 1: continue
+    num.append(int(t[0]))
+print (num)
+s = sum(num)
+print(s)
+l = (len(num))
+print (int(s/l))
