@@ -1,0 +1,8 @@
+d = 1
+num = input('Enter the number')	
+n = int(num)
+while n > 1:
+   d = d*n
+   n = n-1
+print (d)
+   
