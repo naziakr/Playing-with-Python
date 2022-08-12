@@ -1,0 +1,19 @@
+import sqlite3
+conn = sqlite3.connect('music.sqlite')
+cur = conn.cursor()
+cur.execute('DROP TABLE IF EXISTS Tracks')
+cur.execute('CREATE TABLe Tracks(title TEXT, play INTEGER)')
+cur.execute('INSERT INTO Tracks (title, play) VALUES (? ,?)', ('Thunderstruck', '22'))
+cur.execute('INSERT INTO Tracks (title, play) VALUEs (?, ?)', ('My Way', '21'))
+conn.commit()
+print ('Tracks: ')
+cur.execute('SELECT title, play FROM Tracks')
+for row in cur:
+    print(row)
+
+cur.execute ('SELECT*FROM Tracks ORDER BY play')
+print ('New order')
+for row in cur:
+    print(row)
+conn.commit()
+conn.close()
