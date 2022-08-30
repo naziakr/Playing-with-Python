@@ -1,0 +1,13 @@
+while True:
+    inp = int(input('Please type in a number'))
+    i = 1
+    f = 1
+    if inp<=0:
+        break
+    if inp>0:
+        while i<=inp:
+            f = f*i
+            i = i+1
+        print('The factorial of the number', inp, 'is', f)
+        
+print ('Thanks and bye!')
